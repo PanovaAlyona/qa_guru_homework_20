@@ -1,0 +1,37 @@
+# pyproject.toml
+[tool.poetry]
+name = "qa-guru-homework-20"
+version = "0.1.0"
+description = "Mobile automation tests with Appium"
+authors = ["Panova A."]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+selene = "2.0.0rc8"
+selenium = "4.15.0"
+appium-python-client = "2.11.1"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.0.0"
+pytest = "^7.4.3"
+allure-pytest = "^2.13.2"
+pytest-xdist = "^3.5.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+allure-python-commons = "^2.13.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest-html = "^4.1.0"
+pytest-rerunfailures = "^14.0"
+black = "^23.0"
+flake8 = "^6.0"
+mypy = "^1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+test = "pytest tests/"
+test-with-allure = "pytest tests/ --alluredir=allure-results"

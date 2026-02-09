@@ -1,0 +1,7 @@
+pytest
+allure-pytest
+selene>=2.0.0rc9
+Appium-Python-Client
+pydantic==2.12.5
+pydantic-settings>=2.0.0
+selenium==4.15.0
