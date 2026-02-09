@@ -17,9 +17,7 @@ pydantic-settings = "^2.0.0"
 pytest = "^7.4.3"
 allure-pytest = "^2.13.2"
 pytest-xdist = "^3.5.0"
-requests = "^2.31.0"
 python-dotenv = "^1.0.0"
-allure-python-commons = "^2.13.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest-html = "^4.1.0"
@@ -35,3 +33,9 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 test = "pytest tests/"
 test-with-allure = "pytest tests/ --alluredir=allure-results"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = false
+warn_unused_ignores = true
+ignore_missing_imports = true

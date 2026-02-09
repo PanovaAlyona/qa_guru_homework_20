@@ -7,7 +7,7 @@ PROJECT_ROOT = Path(__file__).parent.parent.absolute()
 
 def abs_path_from_project(relative_path: str) -> str:
     """Получить абсолютный путь из относительного пути проекта"""
-    if relative_path.startswith('/') or relative_path.startswith('http'):
+    if relative_path.startswith("/") or relative_path.startswith("http"):
         return relative_path
     return str(PROJECT_ROOT / relative_path)
 
